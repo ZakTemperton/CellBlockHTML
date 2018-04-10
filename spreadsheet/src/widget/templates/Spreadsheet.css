@@ -1,0 +1,108 @@
+.sheet {
+	border-top:1px solid #CCCCCC;
+	border-left:1px solid #CCCCCC;
+	cursor: default;
+}
+.sheet .sheetRow1stCell {
+	border-right:1px solid #AAAAAA;
+	border-bottom:1px solid #AAAAAA;
+	background-color:ThreeDFace;
+    font-size: 12px;
+	font-family: Tahoma, Helvetica, sans, Arial, sans-serif, Verdana;
+	text-align: center;
+	width:20px;
+	height:20px;
+}
+.sheet td {
+	border-bottom:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+}
+.sheet th {
+	border-right:1px solid #AAAAAA;
+	border-bottom:1px solid #AAAAAA;
+	background-color:ThreeDFace;
+	padding-left:3px;
+    font-size: 12px;
+	font-family: Tahoma, Helvetica, sans, Arial, sans-serif, Verdana;
+	text-align: center;			
+	overflow:hidden;
+	width:65px;
+	height:16px;
+}
+.sheet td.sheetCell {
+	margin:0px;
+	padding:0px;
+	width:65px;
+	height:16px;
+}
+.sheet td.sheetCell div {
+	width:65px;
+	height:17px;
+	overflow:hidden;
+    font-size: 11px;
+	font-family: Tahoma, Helvetica, sans, Arial, sans-serif, Verdana;
+	padding:0px;
+	margin:0px;
+}
+.sheet td.sheetCell div.focused {
+	/*width:61px;
+	height:14px;*/
+    border: 2px solid black;
+} 
+.selected {
+	background-color: #C6D0F4;
+}
+.sheet th div {
+	overflow:hidden;
+	height:16px;
+	padding:0px;
+}
+.sheet .horizontalResizer {
+	float: right;
+	display: inline;
+	width: 2px;
+	height: 20px;
+	cursor:col-resize;
+	padding:0px;
+	/*background-color:red;*/
+}
+.sheet th div.horizontalResizer:hover {
+	cursor:e-resize;
+}
+
+.header {
+	width: 100%;
+}
+
+/*----------------------------- styles for the 1st cell in a row - the number cell --------------------------*/
+.sheet th div.headerText {
+	float:left;
+	text-align:center;
+	width:80%;
+	display:inline;
+}
+
+/*------------------------- First cell in a row --------------------------------*/
+.sheet .sheetRow1stCell div.verticalResizer {
+	height: 2px;
+	/*background-color:red;*/
+	cursor:row-resize;
+	overflow:hidden;
+	width:20px;
+}
+.sheet .sheetRow1stCell div.verticalResizer:hover {
+	cursor:n-resize;
+	/*background-color: #4660F4;*/
+}
+.sheet .sheetRow1stCell div.rowHeaderText {
+	/*border:1px solid green;*/
+	overflow:hidden;
+	vertical-align:middle;
+}
+.sheetRow1stCellDiv {
+	/*border:1px solid blue;*/
+}
+.sheetCellContent {
+	/*border:1px solid red;
+	background-color:#EECCCC;*/
+}

@@ -1,0 +1,32 @@
+Cell Block HTML
+
+Key Idea: Fully support the display of HTML in a spreadsheet, this being an enabler to providing an easily accessible platform for performing text analysis (with out resorting to programming directly in a language such as Java, Python).
+
+Keywords: Text Analysis; Page Scraping; Seamless Web Editing
+Sure spreadsheet applications such as Excel and Google Sheets allow you to enter text into cells, in addition to numbers, but the dirty secret of the spreadsheet world is that their role is denigrated to be little more than immutable labels. When you stop to think about it, all that power of computation people associate with these applications is just for the numbers! Text, go take a running jump!!
+
+This is not to say that spreadsheet applications are not useful. Far from it. They provide a low-cost entry-point for many people to perform a generically configurable set of computational tasks without the need to learn how to code in a general purpose programming language—as long as your starting data happens to be numeric.
+
+But computations don't always start with numbers. What about a journalist interesting in working out how many times Donald Trump has tweated using the term Crooked Hillary. There's clearly a calculation there to be done, and they can easily copy a series of tweets, and paste them into a spreadsheet, and get them to appear one per line. But what then? It's hard in a spreadsheet to easily go any further than this.
+
+Are the makers of spreadsheet applications missing a trick? It feels like there should be easy ways to achieve this sort of computation within a spreadsheet environment. And by easy, I don't mean something like:
+
+	=(LEN(B2)-LEN(SUBSTITUTE(B2,"Crooked Hilary","")))/LEN("Crooked Hilary")
+      
+where B2 holds a cell containing one tweak, which is the approach Microsoft suggests.
+This observation motivates this project, where it's aim is extend the tabulated cell approach of spreadsheets to better support text analysis.
+
+To develop spreadsheets in this way, a core issue to figure out is how to go beyond the atomic treatment these applications make of a value in a cell. Notably, representing HTML directly is poorly supported in Microsoft Excel, and perhaps even more surprisingly (ironically!) in web-based spreadsheet products such as Google Sheets.
+
+As a starting point there are plenty of JavaScript libraries that provide open source web-based spreadsheet applications, such as those discussed on Quora. They embody the usual thinking about numeric computation. See for example, EtherCalc.
+
+Current best practice for text analysis within Excel is very primitive, for example:
+
+How to get some basic text Analysis using Excel going out of the box.
+Other things to consider:
+
+Being able to enter and edit HTML directly within a cell (giving rise to the name of the project).
+Being able to import/page scrape from semi-structured sites
+For some home-grown work on Seamless Web Editing see our Seaweed project, the ideas of which can now be seen in HTML editors such as ckeditor
+
+The title for this project is a pun on the Australian TV series Prisoner: Cell Block H but in no other way is connected to it!
