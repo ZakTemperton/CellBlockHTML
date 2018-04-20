@@ -1,0 +1,80 @@
+{
+  "_from": "ethercalc",
+  "_id": "ethercalc@0.20170704.0",
+  "_inBundle": false,
+  "_integrity": "sha1-ROKZPNrE3qIMjp75ykD0or6+78E=",
+  "_location": "/ethercalc",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "ethercalc",
+    "name": "ethercalc",
+    "escapedName": "ethercalc",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ethercalc/-/ethercalc-0.20170704.0.tgz",
+  "_shasum": "44e2993cdac4dea20c8e9ef9ca40f4a2bebeefc1",
+  "_spec": "ethercalc",
+  "_where": "C:\\Users\\zakss",
+  "bin": {
+    "ethercalc": "./bin/ethercalc"
+  },
+  "bugs": {
+    "url": "https://github.com/audreyt/ethercalc/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "cors": "*",
+    "csv-parse": "^0.0.6",
+    "iconv-lite": "^0.4.13",
+    "j": "0.4.x",
+    "livescript": "1.5.x",
+    "minimatch": "*",
+    "nodemailer": "*",
+    "optimist": "*",
+    "redis": "0.12.x",
+    "socialcalc": "2.x",
+    "uuid-pure": "*",
+    "webworker-threads": "^0.7.1",
+    "xoauth2": "*",
+    "zappajs": "0.5.x"
+  },
+  "deprecated": false,
+  "description": "Multi-User Spreadsheet Server",
+  "devDependencies": {
+    "css-loader": "^0.9.0",
+    "livescript-loader": "^0.1.5",
+    "react": "^0.12.1",
+    "react-basic-tabs": "^1.0.3",
+    "react-hot-loader": "^0.5.0",
+    "style-loader": "^0.8.2",
+    "stylus-loader": "^0.4.0",
+    "superagent": "^0.21.0",
+    "webpack": "^1.4.13",
+    "webpack-dev-server": "^1.6.6"
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+  "homepage": "http://ethercalc.net/",
+  "name": "ethercalc",
+  "optionalDependencies": {
+    "webworker-threads": "^0.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/audreyt/ethercalc.git"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "subdomain": "ethercalc",
+  "version": "0.20170704.0"
+}
