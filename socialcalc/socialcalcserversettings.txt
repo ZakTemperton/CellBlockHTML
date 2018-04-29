@@ -1,0 +1,4 @@
+# SocialcalcServer settings
+version:1.0
+datadir:scdata/
+jsdir:/sgi/scjs/
