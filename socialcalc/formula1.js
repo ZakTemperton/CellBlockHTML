@@ -3202,7 +3202,7 @@ SocialCalc.Formula.FunctionList["RIGHT"] = [SocialCalc.Formula.StringFunctions, 
 SocialCalc.Formula.FunctionList["SUBSTITUTE"] = [SocialCalc.Formula.StringFunctions, -3, "subs", "", "text"];
 SocialCalc.Formula.FunctionList["TRIM"] = [SocialCalc.Formula.StringFunctions, 1, "v", "", "text"];
 SocialCalc.Formula.FunctionList["UPPER"] = [SocialCalc.Formula.StringFunctions, 1, "v", "", "text"];
-SocialCalc.Formula.FunctionList["COUNTS"] = [SocialCalc.Formula.StringFunctions, -2, "find", "", "custom"];
+SocialCalc.Formula.FunctionList["COUNTS"] = [SocialCalc.Formula.StringFunctions, 2, "find", "", "custom"];
 
 /*
 #

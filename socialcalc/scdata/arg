@@ -1,0 +1,34 @@
+socialcalc:version:1.0
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary=SocialCalcSpreadsheetControlSave
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+# SocialCalc Spreadsheet Control Save
+version:1.0
+part:sheet
+part:edit
+part:audit
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+version:1.5
+cell:A1:vtf:n:11:COUNTS(B1,B2)
+cell:B1:t:hello world
+sheet:c:2:r:1
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+version:1.0
+rowpane:0:1:36
+colpane:0:1:18
+ecell:D4
+sort::-1:up::::
+--SocialCalcSpreadsheetControlSave
+Content-type: text/plain; charset=UTF-8
+
+set A1 formula COUNTS(B1,B2)
+set B1 text t hello world
+set B2 text t hello
+set B2 empty 
+--SocialCalcSpreadsheetControlSave--

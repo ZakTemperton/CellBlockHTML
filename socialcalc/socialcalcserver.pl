@@ -357,6 +357,7 @@ sub start_editsheet {
 <script type="text/javascript" src="${jsdir}formula1.js"></script>
 <script type="text/javascript" src="${jsdir}socialcalcpopup.js"></script>
 <script type="text/javascript" src="${jsdir}socialcalcspreadsheetcontrol.js"></script>
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <style>
 body, td, input, texarea
  {font-family:verdana,helvetica,sans-serif;font-size:small;}

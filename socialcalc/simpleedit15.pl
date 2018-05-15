@@ -378,6 +378,7 @@ EOF
 <script type="text/javascript" src="${jsdir}formatnumber2.js"></script>
 <script type="text/javascript" src="${jsdir}formula1.js"></script>
 <script type="text/javascript" src="${jsdir}drawlib3.js"></script>
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <script>
 
 function show_datatable(sheetname) {
