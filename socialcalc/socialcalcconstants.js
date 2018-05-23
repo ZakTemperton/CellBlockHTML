@@ -602,7 +602,7 @@ SocialCalc.Constants = {
     s_fdef_COLUMNS: 'Returns the number of columns in the range. ',
     s_fdef_COS: 'Trigonometric cosine function (value is in radians). ', 
     s_fdef_COUNT: 'Counts the number of numeric values, not blank, text, or error. ',
-    s_fdef_COUNTS: 'Description. ',
+    s_fdef_COUNTS: 'Counts the amout of times in string1 string2 appears. ',
     s_fdef_COUNTA: 'Counts the number of non-blank values. ',
     s_fdef_COUNTBLANK: 'Counts the number of blank values. (Note: "" is not blank.) ',
     s_fdef_COUNTIF: 'Counts the number of number of cells in the range that meet the criteria. The criteria may be a value ("x", 15, 1+3) or a test (>25). ',
@@ -738,6 +738,7 @@ SocialCalc.Constants = {
     s_farg_vlookup: "value, range, col, [rangelookup]",
     s_farg_weekday: "date, [type]",
     s_farg_dt: "date",
+    s_farg_counts: "string1, string2",
 
     function_classlist: ["all", "stat", "lookup", "datetime", "financial", "test", "math", "text", "custom"], // order of function classes
 

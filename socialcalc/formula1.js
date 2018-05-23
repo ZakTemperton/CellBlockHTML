@@ -2968,7 +2968,8 @@ SocialCalc.Formula.ArgList = {
     SUBSTITUTE: [1, 1, 1, 0],
     TRIM: [1],
     UPPER: [1],
-    COUNTS: [1,1]
+    COUNTS: [1,1],
+    EXTRACT: [1,1,1]
 };
 
 SocialCalc.Formula.StringFunctions = function(fname, operand, foperand, sheet) {
@@ -3183,6 +3184,14 @@ SocialCalc.Formula.StringFunctions = function(fname, operand, foperand, sheet) {
             result = n;
             resulttype = "n";
             break;
+            
+        case "EXTRACT":
+            var div = document.createElement("div");
+            div.innerHTML = operand_value[1];
+            var elements = div.getElementsByClassName(operand_value[2]);
+            result = elements[operand_value[3]+0].innerHTML;
+            resulttype = "t";
+            break;
     }
 
     scf.PushOperand(operand, resulttype, result);
@@ -3202,7 +3211,9 @@ SocialCalc.Formula.FunctionList["RIGHT"] = [SocialCalc.Formula.StringFunctions, 
 SocialCalc.Formula.FunctionList["SUBSTITUTE"] = [SocialCalc.Formula.StringFunctions, -3, "subs", "", "text"];
 SocialCalc.Formula.FunctionList["TRIM"] = [SocialCalc.Formula.StringFunctions, 1, "v", "", "text"];
 SocialCalc.Formula.FunctionList["UPPER"] = [SocialCalc.Formula.StringFunctions, 1, "v", "", "text"];
-SocialCalc.Formula.FunctionList["COUNTS"] = [SocialCalc.Formula.StringFunctions, 2, "find", "", "custom"];
+
+SocialCalc.Formula.FunctionList["COUNTS"] = [SocialCalc.Formula.StringFunctions, 2, "counts", "", "custom"];
+SocialCalc.Formula.FunctionList["EXTRACT"] = [SocialCalc.Formula.StringFunctions, 3, "counts", "", "custom"];
 
 /*
 #

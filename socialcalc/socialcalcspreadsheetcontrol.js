@@ -848,7 +848,6 @@ SocialCalc.SpreadsheetControl = function() {
                    });
 
     this.views["html"] = {name: "html", divStyle: "overflow:auto;", html:
-                          ' <input type="button" value="%loc!Load SocialCalc Clipboard With This!" style="font-size:x-small;" onclick="%s.SpreadsheetControlClipboardLoad();">&nbsp; '+
                           ' <input type="button" value="%loc!Clear Text!" style="font-size:x-small;" onclick="%s.SpreadsheetControlHTMLClear();">&nbsp; '+
                           ' <input type="button" value="%loc!Load URL!" style="font-size:x-small;" onclick="%s.SpreadsheetControlHTMLLoadURL();">&nbsp; '+
                           ' <br>'+
@@ -859,8 +858,25 @@ SocialCalc.SpreadsheetControl = function() {
                           '<input type="text" style="font-size:small;width:100px;" id="%id.coord" value="A1">'+
                           ' <input type="button" value="%loc!Load To Cell!" style="font-size:x-small;" onclick="%s.SpreadsheetControlHTMLLoadToCell();">&nbsp;' 
                          };
+    
+    this.tabnums.filter = this.tabs.length;
+    this.tabs.push({name: "filter", text: "Filter", html:
+                    '<div id="%id.filtertools" style="display:none;">'+
+                    '  <table cellspacing="0" cellpadding="0"><tr>'+
+                    '   <td style="vertical-align:top;padding-right:24px;">'+
+                    '    <div style="%tbt.">'+
+                    '     &nbsp;'+
+                    '    </div>'+
+                    '   </td>'+
+                    '  </tr></table>'+
+                    '</div>',
+                    view: "filter",
+                    onclick: SocialCalc.SpreadsheetControlFilterOnClick,
+                   });
 
-
+    this.views["filter"] = {name: "filter", divStyle: "overflow:auto;", html:
+                          ' <input type="text" style="font-size:small;width:800px;" id="%id.test">'
+                         };
     return;
 
 }
@@ -2943,6 +2959,17 @@ SocialCalc.SpreadsheetControlHTMLLoadToCell = function()
     SocialCalc.SetConvertedCell(spreadsheet.sheet, e2.value, e1.value);
     spreadsheet.sheet.cells[e2.value].displaystring="'".append(e1.value);
     spreadsheet.sheet.RecalcSheet();
+}
+
+// Filter
+
+
+SocialCalc.SpreadsheetControlFilterOnClick = function(s, t)
+{
+    var s = SocialCalc.GetSpreadsheetControlObject();
+    var e = document.getElementById(s.idPrefix+"test");
+    e.value = "";
+    e.focus();
 }
 
 // Settings
